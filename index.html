@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en" data-dm-ref="2" data-page-node-id="B2CnROAU9aI6P8AYw5uhLl" style="--nav-h: 71px;"><head data-page-node-id="q0Cpe0m2ede21905WqyaQF">
+<meta charset="UTF-8" data-page-node-id="6pNTDHlz90BTa7Hx7DnhFA">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="Xecy5PBerFpAKlhr5PktUd">
+<title>Melanie Hu — Personal Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="ElK8tY2Uau0sZgQjJJzgyo">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" data-page-node-id="ZexWIrarLSABxzquEvPud3">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" data-page-node-id="NdkCHE9N9Gz7HQnhgokwsT">
+<style>
+  :root {
+    --bg: #fcfcfd;
+    --ink: #131316;
+    --muted: #8b8b94;
+    --hairline: #e9e9ee;
+    --primary: #678EC9;
+    --primary-deep: #262277;
+    --pink: #FFCEE3;
+    --pink-deep: #d98bab;
+    --wash: radial-gradient(900px 620px at 88% 8%, rgba(255,206,227,.30), transparent 62%),
+            radial-gradient(820px 600px at 4% 88%, rgba(103,142,201,.16), transparent 60%);
+    --glow: 0 10px 30px rgba(38, 34, 119, .16);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Inter", -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+  }
+  ::selection { background: var(--pink); color: #131316; }
+  .serif { font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 40px; }
+  a { color: inherit; }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-inner { max-width: 1160px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; font-weight: 600; letter-spacing: .5px; }
+  .nav-logo i { font-style: italic; color: var(--pink-deep); }
+  .nav-links { display: flex; gap: 30px; }
+  .nav-links a { text-decoration: none; color: var(--ink); font-size: 13px; letter-spacing: .3px; position: relative; }
+  .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -3px; width: 0; height: 1px; background: var(--pink-deep); transition: width .25s; }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { font-size: 12px; color: var(--muted); }
+  @media (max-width: 720px) { .nav-links, .nav-cta { display: none; } }
+
+  /* ---------- hero ---------- */
+  .hero { min-height: 92vh; display: flex; flex-direction: column; justify-content: center; position: relative; background: var(--wash); }
+  .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; padding: 90px 0 60px; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink);
+    background: var(--pink); border-radius: 999px; padding: 5px 14px; margin-bottom: 34px; width: fit-content;
+  }
+  .hero-tag .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--primary-deep); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+  .hero h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(64px, 10.5vw, 150px);
+    font-weight: 500; line-height: .98; letter-spacing: -1px;
+    color: var(--ink);
+  }
+  .hero h1 em { font-style: italic; font-weight: 500; color: var(--primary-deep); }
+  .hero-caption { margin-top: 40px; max-width: 460px; font-size: 14px; color: var(--muted); line-height: 1.9; }
+  .hero-caption b { color: var(--ink); font-weight: 500; }
+  .hero-caption .zh { display: block; margin-top: 8px; font-size: 12px; color: var(--muted); opacity: .75; letter-spacing: 2px; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .hero-tags .tag { font-size: 12px; color: var(--ink); border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 14px; background: #fff; }
+
+  .hero-portrait { position: relative; width: clamp(220px, 24vw, 320px); }
+  .portrait-arch {
+    width: 100%; aspect-ratio: 3 / 3.9;
+    border-radius: 999px 999px 18px 18px;
+    overflow: hidden; border: 1px solid var(--hairline);
+    box-shadow: var(--glow); background: #fff;
+  }
+  .portrait-arch img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .portrait-note { margin-top: 14px; font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; text-align: center; }
+  .scroll-hint {
+    position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+    font-size: 11px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase;
+  }
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; padding: 60px 0 70px; }
+    .hero-portrait { width: 200px; }
+    .scroll-hint { display: none; }
+  }
+
+  /* ---------- numbered sections ---------- */
+  section { padding: 90px 0; border-top: 1px solid var(--hairline); }
+  .sec-head { display: grid; grid-template-columns: 70px 1fr auto; gap: 20px; align-items: baseline; margin-bottom: 48px; }
+  .sec-num { font-size: 12px; color: var(--muted); letter-spacing: 1px; }
+  .sec-title { font-size: clamp(38px, 5.5vw, 64px); font-weight: 400; letter-spacing: -1.5px; line-height: 1.05; }
+  .sec-title .zh { display: block; font-size: 12px; color: var(--muted); letter-spacing: 3px; margin-top: 10px; font-weight: 400; }
+  .sec-side { font-size: 12.5px; color: var(--muted); text-align: right; max-width: 220px; line-height: 1.8; }
+  @media (max-width: 720px) { .sec-head { grid-template-columns: 1fr; } .sec-side { text-align: left; } }
+
+  /* education */
+  .edu-name { font-size: clamp(24px, 3.4vw, 36px); font-weight: 500; letter-spacing: -.5px; }
+  .edu-meta { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-top: 10px; font-size: 14px; color: var(--muted); }
+  .edu-meta .major b { color: var(--primary); font-weight: 500; }
+  .edu-meta .date { color: var(--ink); font-weight: 500; }
+  .gpa-row { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; margin-top: 34px; padding-top: 24px; border-top: 1px solid var(--hairline); }
+  .gpa-item { font-size: 13px; color: var(--muted); }
+  .gpa-item b { color: var(--ink); font-size: 17px; font-weight: 500; margin: 0 2px; }
+  .gpa-bar { flex: 1; min-width: 200px; height: 4px; background: var(--hairline); border-radius: 99px; overflow: hidden; }
+  .gpa-fill { height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--pink), var(--primary), var(--primary-deep)); transition: width 1.4s cubic-bezier(.22,.8,.35,1); }
+
+  /* rows (experience / campus / honors) */
+  .row {
+    display: grid; grid-template-columns: 110px 1fr auto; gap: 24px; align-items: baseline;
+    padding: 26px 10px; border-top: 1px solid var(--hairline); transition: background .25s;
+  }
+  .row:first-of-type { border-top: none; }
+  .row:hover { background: color-mix(in srgb, var(--pink) 12%, transparent); }
+  .row-date { font-size: 12.5px; color: var(--muted); letter-spacing: .5px; }
+  .row-title { font-size: 18px; font-weight: 500; letter-spacing: -.2px; }
+  .row-title .org { color: var(--primary-deep); }
+  .row-desc { margin-top: 6px; font-size: 13.5px; color: var(--muted); max-width: 640px; }
+  .row-role { font-size: 11.5px; color: var(--ink); border: 1px solid var(--hairline); border-radius: 999px; padding: 4px 13px; white-space: nowrap; }
+  @media (max-width: 720px) { .row { grid-template-columns: 1fr; gap: 6px; } }
+
+  /* skills */
+  .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--hairline); }
+  .skill { padding: 34px 28px 10px 0; border-right: 1px solid var(--hairline); }
+  .skill:last-child { border-right: none; }
+  .skill .no { font-size: 11px; color: var(--pink-deep); letter-spacing: 2px; }
+  .skill h3 { margin-top: 12px; font-size: 20px; font-weight: 500; letter-spacing: -.3px; }
+  .skill p { margin-top: 10px; font-size: 13.5px; color: var(--muted); padding-bottom: 26px; }
+  /* 技能卡：点击 → 原地微微放大（transform，不参与网格布局，因此必然不重叠），
+     其余卡片顺势向两侧滑开让位（margin 位移 + flip 批量补间，丝滑无跳变） */
+  .skill { cursor: pointer; background: transparent; border-radius: 12px; position: relative; }
+  .skill h3, .skill p, .skill .no { transition: color .3s ease; }
+  .skill.active {
+    background: color-mix(in srgb, var(--primary) 7%, #fff);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--primary) 14%, transparent);
+  }
+  .skill.active h3 { color: var(--primary-deep); }
+  .skills.focusing .skill { z-index: 1; }
+  .skills.focusing .skill.active { z-index: 3; }
+  @media (max-width: 720px) {
+    .skills { grid-template-columns: 1fr; } .skill { border-right: none; border-bottom: 1px solid var(--hairline); }
+  }
+
+  /* contact */
+  .contact-inner { padding: 20px 0 10px; }
+  .contact h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(56px, 9vw, 130px); font-weight: 500; line-height: .98; letter-spacing: -1px;
+  }
+  .contact h2 em { font-style: italic; color: var(--primary-deep); }
+  .contact-actions { margin-top: 50px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .btn-send {
+    display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+    background: var(--primary-deep); color: #fff; font-size: 14px; letter-spacing: .5px;
+    padding: 17px 34px; transition: transform .25s, box-shadow .25s, background .25s;
+  }
+  .btn-send:hover { transform: translateX(4px); box-shadow: var(--glow); }
+  .contact-links { display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; }
+  .contact-links a { color: var(--muted); text-decoration: none; }
+  .contact-links a:hover { color: var(--ink); text-decoration: underline; }
+
+  /* footer */
+  footer { border-top: 1px solid var(--hairline); padding: 64px 0 30px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  .foot-logo { font-family: "Cormorant Garamond", Georgia, serif; font-size: 24px; font-weight: 600; }
+  .foot-logo i { font-style: italic; color: var(--pink-deep); }
+  .foot-tag { margin-top: 14px; font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 17px; color: var(--ink); }
+  .foot-tag-zh { margin-top: 6px; font-size: 11.5px; color: var(--muted); letter-spacing: 2px; }
+  .foot-col h4 { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; font-weight: 500; }
+  .foot-col a, .foot-col span { display: block; font-size: 13.5px; color: var(--ink); text-decoration: none; margin-bottom: 8px; }
+  .foot-col a:hover { color: var(--pink-deep); }
+  .foot-bottom { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+  @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr; } }
+
+  /* reveal animation —— 入场/滚动动画由页面底部 Motion（FLIP）引擎接管：
+     初始隐藏态、触发时机、时长与缓动全部由 JS 同帧控制，避免 CSS/JS 双系统叠加 */
+  .reveal { will-change: transform, opacity; }
+
+  /* ---------- edit mode ---------- */
+  body.editing .editable { outline: 1.5px dashed var(--pink-deep); outline-offset: 3px; border-radius: 3px; cursor: text; min-width: 1em; }
+  body.editing .editable:hover { outline-color: var(--primary); }
+  body.editing .editable:focus { outline: 1.5px solid var(--primary); background: color-mix(in srgb, var(--pink) 18%, #fff); }
+
+  /* ---------- floating widgets ---------- */
+  .progress-chip {
+    position: fixed; left: 18px; bottom: 18px; z-index: 90;
+    font-size: 11px; color: var(--muted); background: #fff; border: 1px solid var(--hairline);
+    border-radius: 999px; padding: 5px 12px; letter-spacing: 1px; user-select: none;
+  }
+  .settings-fab {
+    position: fixed; right: 18px; bottom: 18px; z-index: 100;
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 1px solid var(--hairline); background: #fff; color: var(--ink);
+    font-size: 17px; cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    transition: transform .3s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .settings-fab:hover { transform: rotate(90deg) scale(1.06); }
+  .settings-panel {
+    position: fixed; right: 18px; bottom: 74px; z-index: 100;
+    width: 300px; max-width: calc(100vw - 32px);
+    background: #fff; border: 1px solid var(--hairline); border-radius: 14px;
+    box-shadow: 0 18px 50px rgba(0,0,0,.12); padding: 20px; display: none;
+  }
+  .settings-panel.open { display: block; } /* 开/关动画由底部 Motion 引擎接管 */
+  @keyframes pop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .sp-head { font-weight: 600; font-size: 13.5px; letter-spacing: .5px; margin-bottom: 14px; }
+  .sp-group { margin-bottom: 14px; }
+  .sp-group > label { display: block; font-size: 11px; color: var(--muted); margin-bottom: 8px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .swatches { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+  .swatch {
+    width: 24px; height: 24px; border-radius: 50%; cursor: pointer; border: 2px solid transparent;
+    box-shadow: 0 1px 5px rgba(0,0,0,.12); transition: transform .2s; padding: 0;
+  }
+  .swatch:hover { transform: scale(1.15); }
+  .swatch.active { border-color: #fff; outline: 1.5px solid var(--ink); }
+  .custom-color { width: 24px; height: 24px; border: none; padding: 0; background: none; cursor: pointer; }
+  .custom-color::-webkit-color-swatch-wrapper { padding: 0; }
+  .custom-color::-webkit-color-swatch { border-radius: 50%; border: 1px dashed var(--hairline); }
+  .sp-btn {
+    width: 100%; padding: 9px 0; border-radius: 9px; font-size: 12.5px; cursor: pointer;
+    border: 1px solid var(--hairline); background: #fff; color: var(--ink);
+    transition: background .2s, transform .2s; letter-spacing: .3px;
+  }
+  .sp-btn:hover { background: var(--bg); }
+  .sp-btn:active { transform: scale(.97); }
+  .sp-btn.primary-btn { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .sp-btn.primary-btn:hover { background: #000; }
+  .sp-btn.danger-btn { color: #b05b5b; }
+  .sp-row { display: flex; gap: 10px; }
+  .sp-tip { font-size: 11px; color: var(--muted); line-height: 1.7; margin-top: 12px; }
+  #avatarInput { font-size: 12px; color: var(--muted); width: 100%; }
+
+  /* ================================================================
+     Paged stage —— 一屏一板块（本页新增）
+     stage 关掉整页滚动，每个 .screen 都是 100vh 的绝对定位层叠层，
+     切换时用 transform 做 FLIP 平移，不产生任何 document 级滚动。
+     ================================================================ */
+  html, body { height: 100%; }
+  body { overflow: hidden; }
+
+  .stage { position: fixed; left: 0; right: 0; bottom: 0; top: var(--nav-h, 72px); overflow: hidden; }
+
+  .screen {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 30px 0 96px;            /* 顶部留白给分隔线呼吸；翻页提示在底部 */
+    overflow: hidden;
+    will-change: transform, opacity;
+    backface-visibility: hidden;      /* 防闪烁：避免亚像素抖动 */
+    transform: translateZ(0);
+  }
+  .screen > .container { width: min(1180px, 90vw); margin: 0 auto; }
+  /* 屏内分区不再自带 padding/顶线（分页布局里会变成悬空线 + 挤压内容） */
+  .screen .screen-body { padding: 0; border-top: none; }
+  /* 内容超高时：改为顶对齐 + 屏内滚动，绝不钻到版头底下 */
+  .screen.tall { justify-content: flex-start; overflow-y: auto; overscroll-behavior: contain; }
+  /* 屏幕自身背景随主题走，避免切换时透出下一屏 */
+  .screen { background: #fff; }
+  .screen.hero-screen, .screen.contact-screen { background: var(--wash); }
+  .screen.contact-screen { background: var(--wash); }
+
+  /* 屏内内容过高的兜底：允许该屏内部纵向滚动，不破坏分页结构 */
+  .screen-inner-scroll { overflow-y: auto; overscroll-behavior: contain; }
+
+  /* ---------- 分页指示器（右侧圆点 + 编号） ---------- */
+  .pager {
+    position: fixed; right: 26px; top: 50%; transform: translateY(-50%);
+    z-index: 60; display: flex; flex-direction: column; gap: 14px; align-items: flex-end;
+  }
+  .pager button {
+    display: flex; align-items: center; gap: 10px;
+    background: none; border: 0; padding: 2px 0; cursor: pointer;
+    font: inherit; color: var(--muted); opacity: .55;
+    transition: opacity .35s cubic-bezier(.22,.61,.36,1), color .35s;
+  }
+  .pager button .pg-label {
+    font-size: 10.5px; letter-spacing: 1.6px; text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0; transform: translateX(6px);
+    transition: opacity .35s cubic-bezier(.22,.61,.36,1), transform .35s cubic-bezier(.22,.61,.36,1);
+  }
+  .pager button .pg-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    border: 1px solid var(--muted); background: transparent;
+    transition: transform .4s cubic-bezier(.22,.61,.36,1), background .4s, border-color .4s;
+  }
+  .pager button:hover { opacity: 1; }
+  .pager button:hover .pg-label { opacity: 1; transform: none; }
+  .pager button.active .pg-label { opacity: 1; transform: none; }  /* 当前屏常显标签 */
+  .pager button:focus { outline: none; }                            /* 去掉默认黑框 */
+  .pager button:focus-visible { outline: 1.5px dashed var(--muted); outline-offset: 4px; border-radius: 4px; }
+  .pager button.active { opacity: 1; color: var(--ink); }
+  .pager button.active .pg-dot { background: var(--primary); border-color: var(--primary); transform: scale(1.5); }
+
+  /* ---------- 底部翻页提示 ---------- */
+  .page-cue {
+    position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%);
+    z-index: 60; display: flex; align-items: center; gap: 9px;
+    font-size: 10.5px; letter-spacing: 2.2px; text-transform: uppercase; color: var(--muted);
+    background: rgba(255,255,255,.72); backdrop-filter: blur(8px);
+    border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 15px;
+    user-select: none; pointer-events: none;
+    transition: opacity .4s ease;
+  }
+  .page-cue .cue-arrow { display: inline-block; animation: cueBob 1.9s ease-in-out infinite; }
+  @keyframes cueBob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+  .page-cue.hidden { opacity: 0; }
+
+  /* 原滚动进度条改为「当前页 / 总页数」 */
+  #progressChip { letter-spacing: 1.5px; }
+
+  /* 分页后不再需要 hero 的 92vh 与整页滚动提示 */
+  .screen .hero { min-height: auto; background: transparent; }
+  .screen .hero-grid { padding: 0; }
+  .scroll-hint { display: none; }
+
+  @media (max-width: 900px) {
+    .pager { display: none; }
+    .screen { padding: 22px 0 92px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pager button, .pager button .pg-dot, .pager button .pg-label { transition: none; }
+  }
+</style>
+<style id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style></head>
+<body style="position: relative;" data-page-node-id="MmkPJWYymcHwCKF8gJrPOf">
+
+<nav data-page-node-id="mx5N3xwKc8URGIIAlTs9Eg">
+  <div class="nav-inner" data-page-node-id="JnSFZleHlp9kLL1HCfMVpA">
+    <div class="nav-logo editable" style="cursor: pointer;" data-page-node-id="ZkQHVp8AqkLwzqVbKZF7cf">Meanie Hu&nbsp;<i style="color: rgb(68, 84, 106); font-style: normal;" data-page-node-id="0y0vjgcqTiE3O8jpwD9BPC">胡伊然</i></div>
+    <div class="nav-links" data-page-node-id="9sXlZV0BnQ0ADRsXnaJGYO">
+      <a href="#edu" data-page-node-id="NHerB5trb74PMuAxAdWCZT">Education</a>
+      <a href="#exp" data-page-node-id="YKsZO1QI46N7eHfGnKbNt4">Experience</a>
+      <a href="#campus" data-page-node-id="05x8Ri85jinMqrxUCrAv3s">Campus</a>
+      <a href="#awards" data-page-node-id="NvOuK3Rzo2kDIIjpKvZD0h">Honors</a>
+      <a href="#skills" data-page-node-id="ILIKpvwWi7zIbUDxBlOQZL">Skills</a>
+    </div>
+    <div class="nav-cta" data-page-node-id="wGQRjC3RmLj6kXvQvZepo2">Beijing · Open to Work</div>
+  </div>
+</nav>
+
+<!-- ============ FOOTER ============ -->
+
+<!-- ============ Settings Panel ============ -->
+
+<!-- ============ Paged Stage（一屏一板块） ============ -->
+<div class="stage" id="stage" data-page-node-id="dTzQsWbA2bY2U5O2Bqjeg5">
+
+<div class="screen hero-screen tall" data-screen="0" data-label="Intro" aria-label="Intro" data-page-node-id="M9eAssNGoMuMcRBVJJEmpJ" aria-hidden="true" style="transition: none; transform: translateY(-9%); opacity: 0; z-index: 0;">
+  <div class="container" data-page-node-id="kEFk0gHuwG5T7L7LclFo7e"><header class="hero" data-page-node-id="XQt7kEfQ8HXgJWTBA58L9W">
+  <div class="container hero-grid" data-page-node-id="BnStIxOUcFZbkwNM63bHkI">
+    <div class="reveal visible" data-page-node-id="eRfsupNbb0r0xZ23Rqn1eo" style="transition: none; transform: none; opacity: 0;">
+      <div class="hero-tag editable" data-page-node-id="fB0pKDjlj2UHtxmRr9xQF0" style=""><span class="pulse" data-page-node-id="dBETjuGkP0D3yOGONaB5zx" style=""></span>Open to Work — Paralegal......</div>
+      <h1 class="editable" data-page-node-id="8z561wpInVEHFfmHQwYrpA">Melanie Hu<br data-page-node-id="D2ZYAcMiE7nvdZBtrhmUdP"><em style="font-style: normal; font-size: 48px;" data-page-node-id="zP2jALFUWfbpNFFb1JdyBD">胡伊然</em></h1>
+      <p class="hero-caption editable" data-page-node-id="a4CDbjwlhDzuUvL25LezFq">I believe that every law has a loop hole.</p>
+      <div class="hero-tags" data-page-node-id="5fY2EfhVtfkJTke5HQ7o3a">
+        <span class="tag editable" data-page-node-id="OHMAEWHF6xfbGcnwBoCaRe">📍 Beijing · China</span>
+        <span class="tag editable" data-page-node-id="jD5LOPDV7XTKDmDiCwCiEE">🎓 Minzu University of China</span>
+        <span class="tag editable" data-page-node-id="LmhBfd7xrUDpOljaDBekRZ">⚖️ Major in Law</span>
+        <span class="tag editable" data-page-node-id="laBhK4E7ryNeUiQxdpiSgT" style="">🌱 20 ​</span>
+      </div>
+    </div>
+    <div class="hero-portrait reveal visible" data-page-node-id="x8vkqD28NjC2HyC0q5xAhB" style="transition: none; transform: none; opacity: 0;">
+      <div class="portrait-arch" data-page-node-id="cmDxirFT6iQ66mqBEVxK9q"><img id="avatarImg" src="data:image/jpeg;base64,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" alt="Melanie Hu" data-page-node-id="Vhz0CcOBkaxo0zU5HPZxtW"></div>
+    </div>
+  </div>
+  <div class="scroll-hint" data-page-node-id="n5WDWgAzdkXEIi7IHncYQp">Scroll ↓</div>
+</header></div>
+</div>
+
+<div class="screen " data-screen="1" data-label="Education" aria-label="Education" data-page-node-id="JgO8xg81jOWDjmhxOcNZLb" aria-hidden="true" style="transition: none; transform: translateY(-22%); opacity: 0; z-index: 1;">
+  <div class="container" data-page-node-id="w79GRDLhQs9UUV6qshYAn2"><section id="edu" class="screen-body" data-page-node-id="maAUpE6W56AUnZI07DDwmn">
+    <div class="sec-head reveal visible" data-page-node-id="xyXleFcxQzb0vYDUQiZYb5" style="transition: none; transform: none; opacity: 0;">
+      <div class="sec-num" data-page-node-id="3YWw4YaLLhEfeHqV8HH1ZR">01</div>
+      <h2 class="sec-title editable" data-page-node-id="S6nCDKfcL9ChfOQlD6s1f5">Education<span class="zh editable" data-page-node-id="GivB5kC8aVkOZJv3W999mJ">教育经历</span></h2>
+      <div class="sec-side editable" data-page-node-id="AjjOEhuoUwyK08jpx1DoDd" style="white-space: pre-wrap; cursor: text;">Built on curiosity, discipline and freedom.​</div>
+    </div>
+    <div class="reveal visible" data-page-node-id="uGBEis2GMnXDLg7rcoQ0xX">
+      <div class="edu-name editable" data-page-node-id="NE9AzqH2jR52xzQQDgMQAA" style="transition: none; transform: none; opacity: 0;">Minzu University of China — School of Law</div>
+      <div class="edu-meta" data-page-node-id="1VzVlAtijjOT5MLjuu1K1n">
+        <div class="major editable" data-page-node-id="pVR8rMYzmA6fI6qf0h1vTZ">Bachelor of Laws · <b data-page-node-id="oFFzIAmhGRa36leprEbirh">Foreign-Related Rule of Law</b> Program</div>
+        <div class="date editable" data-page-node-id="Xw9LPzuYcHaVg0Z07scbmy">Sep 2025 — Jun 2029</div>
+      </div>
+      <div class="gpa-row" data-page-node-id="PcEnqVi4DJ7m6aflHo2lCW">
+        <div class="gpa-item editable" data-page-node-id="TOeOG2dILvRTcM441FnyHB">GPA <b data-page-node-id="zqrSCQ7ATJuZi1ztEr1kYg">3.79</b> / 5</div>
+        <div class="gpa-item editable" data-page-node-id="0ns4HL7aNUqNhZRrDepGMX">Ranking: <b data-page-node-id="KYTKL37j1CEEadJcdG4bMH">30%</b></div>
+        <div class="gpa-bar" data-page-node-id="DjALexNkTPtSwvOjfooDhD"><div class="gpa-fill" data-w="76%" style="width: 76%;" data-page-node-id="Mpv6u9FSywAM0xsMtBdwT4"></div></div>
+      </div>
+    </div>
+  </section></div>
+</div>
+
+<div class="screen " data-screen="2" data-label="Experience" aria-label="Experience" data-page-node-id="AXubNpBVJElcUGmeKrEpR5" aria-hidden="false" style="transition: transform 940ms cubic-bezier(0.22, 0.61, 0.36, 1), opacity 846ms cubic-bezier(0.22, 0.61, 0.36, 1); transform: none; opacity: 1; z-index: 2;">
+  <div class="container" data-page-node-id="RR5JNYTI4ZNWH9CaQ1VKq2"><section id="exp" class="screen-body" data-page-node-id="msb1NxGEPPKYvAgRYS1fvN">
+    <div class="sec-head reveal visible" data-page-node-id="rij7guppA76FtvJT42lIf1" style="">
+      <div class="sec-num" data-page-node-id="BfbYTX4FF6FQVu4eIuaFLo">02</div>
+      <h2 class="sec-title editable" data-page-node-id="82zFe2XknZYYptUAYy8v2B">Experience<span class="zh editable" data-page-node-id="CChDv31BEuJYCpPAW2rVSZ">实习经历</span></h2>
+      <div class="sec-side editable" data-page-node-id="HANwYgYOSOCua43gBQ9hC2">Learning how the law works — from inside the courtroom.</div>
+    </div>
+    <div class="reveal visible" data-page-node-id="J7dqDAAZqvRX6io7cErPO5">
+      <div class="row" data-page-node-id="PORnHLOwB23kMLBLSmg5xp" style="">
+        <div class="row-date editable" data-page-node-id="F3A8qpBvMsBkn5gIRYS3qA">Jul 2026 — Sep 2026</div>
+        <div data-page-node-id="QD9cHGVAg9WUNxXwVxk8C5">
+          <div class="row-title editable" data-page-node-id="uAPBNG7LH5RDjHzbAEvKCA"><span class="org" data-page-node-id="PlUe17BCbkQ92ULIT72XrY">Beijing No.4 Intermediate People's Court</span> — Case Filing Division</div>
+          <div class="row-desc editable" data-page-node-id="LQCJd2VrCONCYmIZFB7zEF">Judicial Assistant Intern. Organized case files and evidence, proofread legal documents, and became familiar with case-filing and trial-support procedures.</div>
+        </div>
+        <span class="row-role editable" data-page-node-id="ZTuugKdqhiUuQP0LYNbJ3j">Intern</span>
+      </div>
+    </div>
+  </section></div>
+</div>
+
+<div class="screen tall" data-screen="3" data-label="Campus" aria-label="Campus" data-page-node-id="PcaM4vvRYtPL9v2vEPFIGL" aria-hidden="true" style="transition: none; transform: translateY(9%); opacity: 0; z-index: 0;">
+  <div class="container" data-page-node-id="craFYx21DoVzqHDBxRDisT"><section id="campus" class="screen-body" data-page-node-id="DmrYrCkGhBHfnOwOWrGFL1">
+    <div class="sec-head reveal visible" data-page-node-id="bwZSFyw5ACO2Yk2nHd5R6Q" style="transition: none; transform: translateY(24px); opacity: 0;">
+      <div class="sec-num" data-page-node-id="sr2bjkmQGqAz7c60G0aOBY">03</div>
+      <h2 class="sec-title editable" data-page-node-id="SUHEusn6oYNEsawXtuQWg1">Campus<span class="zh editable" data-page-node-id="lMaDYtHLcGPZdJBFE8KlmV">校园经历</span></h2>
+      <div class="sec-side editable" data-page-node-id="AVcgtcDQwQgTvDp9EmotOv">Organizing people and events, one season at a time.</div>
+    </div>
+    <div class="reveal visible" data-page-node-id="kwTeo3nMY3voYK1zR49alI">
+      <div class="row" data-page-node-id="Dhfgwfk2g63w4uG2svoeAM" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <div class="row-date editable" data-page-node-id="vZdB55sD5SRwMLSMnL61vs">Jun 2026 — Present</div>
+        <div data-page-node-id="veCvfzxnOaauHuKzAmsS8h">
+          <div class="row-title editable" data-page-node-id="iTU1OBHZwroutsfbckjYJN"><span class="org" data-page-node-id="TahSDDSe3PuyLuVDcTxaks">Law School Student Union</span> — Sports Department</div>
+          <div class="row-desc editable" data-page-node-id="fMhmfCxP9WbTbjqA6EXSIE">Lead departmental planning and event organization, strengthening teamwork and coordination skills.</div>
+        </div>
+        <span class="row-role editable" data-page-node-id="ECDJa7wqMswKLn8Jvx1kbs">Director</span>
+      </div>
+      <div class="row" data-page-node-id="Yb9CYX2I43wNQoAwlLL4W8" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <div class="row-date editable" data-page-node-id="ux3TDLyyUMVyG2eCUMbYE2">Sep 2025 — Jun 2026</div>
+        <div data-page-node-id="DjnoALqiy31w9NZ5qYRcjG">
+          <div class="row-title editable" data-page-node-id="YkMA6vkylJ3qG46svlwpOs"><span class="org" data-page-node-id="uDCN15P6BLdnLLFX1m064w">Law School Student Union</span> — Sports Department</div>
+          <div class="row-desc editable" data-page-node-id="dFe2EjNFC1fCoivEVuzqfI">Helped organize sports events and gained hands-on student-work experience.</div>
+        </div>
+        <span class="row-role editable" data-page-node-id="1MRFmP3s8oYX6FoTOkR4Ud">Member</span>
+      </div>
+    </div>
+  </section></div>
+</div>
+
+<div class="screen tall" data-screen="4" data-label="Honors" aria-label="Honors" data-page-node-id="OGRklpmkCT72MnUedARod3" aria-hidden="true" style="transition: none; transform: translateY(9%); opacity: 0; z-index: 0;">
+  <div class="container" data-page-node-id="PEwd8ZZkg98YA5rLXa6Vhg"><section id="awards" class="screen-body" data-page-node-id="QFlTxE7bKMhzubaBYxLY7Z">
+    <div class="sec-head reveal visible" data-page-node-id="yA7vDsym1ZXGW7bj7H1iE3" style="transition: none; transform: translateY(24px); opacity: 0;">
+      <div class="sec-num" data-page-node-id="IOdgx4uCe8BY8mc9Gxl2Sy">04</div>
+      <h2 class="sec-title editable" data-page-node-id="fBeFG82vJaiCV0aDCRO7bU">Honors<span class="zh editable" data-page-node-id="SLzeG3BwT41R2FPcPUOlbN">荣誉奖项</span></h2>
+      <div class="sec-side editable" data-page-node-id="HABFOVhvBvKMKcPTHrEE3Q">Small proof that the effort was real.</div>
+    </div>
+    <div class="reveal visible" data-page-node-id="riSRjE6dwmpMHufOnPxl3f">
+      <div class="row" data-page-node-id="A7423KYjkQ2juvcKgWcYlg" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <div class="row-date editable" data-page-node-id="Z6kPuiyGt8YECHUz43CGD2">Sep 2026</div>
+        <div data-page-node-id="4brzSHYP27khZwOAHbLWxF">
+          <div class="row-title serif editable" style="font-style:italic; font-size:22px;" data-page-node-id="d8VPM0gLI1fJwsF3rzABCE">Second-Class Academic Scholarship — School of Law</div>
+          <div class="row-desc editable" data-page-node-id="H7305p9ffLynIUWSy9HBku">Awarded by Minzu University of China for academic performance.</div>
+        </div>
+        <span class="row-role editable" data-page-node-id="HpMjYLtXVq7WPEJ0ON1RN8">Scholarship</span>
+      </div>
+      <div class="row" data-page-node-id="IEjfHoVoqwSpHgJvIytXqK" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <div class="row-date editable" data-page-node-id="tVqj5j8RQNT1L9iA9WBIxR">Aug 2026</div>
+        <div data-page-node-id="39uqqtyinqNoSKyMgxX20D">
+          <div class="row-title serif editable" style="font-style:italic; font-size:22px;" data-page-node-id="gMrMC9GHocJUZDAqG5CNBV">"Challenge Cup" Entrepreneurship Plan Competition</div>
+          <div class="row-desc editable" data-page-node-id="iKk8EfkdnYAWCxdGxFnRw7">Third Prize, Beijing Division — China College Students' Entrepreneurship Plan Competition.</div>
+        </div>
+        <span class="row-role editable" data-page-node-id="IGyUtkHhZpfyHcBPAFDZtI">Team Leader</span>
+      </div>
+      <div class="row" data-page-node-id="HLcUlLwk9LgxaAWEH5uDzm" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <div class="row-date editable" data-page-node-id="Y8OS1Jwr6g81EQGKkWuJ84">May 2026</div>
+        <div data-page-node-id="MnPqnonEwck3RP2pog2IAb">
+          <div class="row-title serif editable" style="font-style:italic; font-size:22px;" data-page-node-id="mxqR1RfPOfKUmSYFsCi7h6">National E-Commerce "Innovation, Creativity &amp; Entrepreneurship" Challenge</div>
+          <div class="row-desc editable" data-page-node-id="4dxdTA5XyqX7wFvCCDR6TH">First Prize, University Level.</div>
+        </div>
+        <span class="row-role editable" data-page-node-id="eZCBHAim8OVQ5YeylDE0kz">Team Leader</span>
+      </div>
+    </div>
+  </section></div>
+</div>
+
+<div class="screen tall" data-screen="5" data-label="Skills" aria-label="Skills" data-page-node-id="vXuxaY3vJqvwnzdPK9W42V" aria-hidden="true" style="transition: none; transform: translateY(9%); opacity: 0; z-index: 0;">
+  <div class="container" data-page-node-id="d1860idt7CBUD74VAOGWuC"><section id="skills" class="screen-body" data-page-node-id="IRtzyKZPVqNUlhU8u0jXpH">
+    <div class="sec-head reveal visible" data-page-node-id="uucSNideV9RLTEYY7wM8Mx" style="transition: none; transform: translateY(24px); opacity: 0;">
+      <div class="sec-num" data-page-node-id="lavtaleCnCaOUD7Lo88y3D">05</div>
+      <h2 class="sec-title editable" data-page-node-id="Qu0Kao3GbZU2RoJwnYER4H">Skills<span class="zh editable" data-page-node-id="2ParhSz49luWTOXcpukjRA">个人技能</span></h2>
+      <div class="sec-side editable" data-page-node-id="8SoAHBNeixOCNb7WeDCTtR">Tools and habits that keep the work steady.</div>
+    </div>
+    <div class="skills reveal visible" data-page-node-id="GZOtE6q0poMZ7CuviueWI4">
+      <div class="skill" data-page-node-id="yz13ia487YnE2UP5Sls3I2" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <div class="no" data-page-node-id="FET2dZVMFRPdS3OPLB5KwA">a.</div>
+        <h3 class="editable" data-page-node-id="sVNgKxNzmAj1SGBz0nhl5I">Languages</h3>
+        <p class="editable" style="white-space: pre-wrap;" data-page-node-id="x5DaOig3c0EKmObFawDiq5">CET-6  528
+with strong English listening, speaking, reading and writing skills​</p>
+      </div>
+      <div class="skill" data-page-node-id="3NXdIVDH0hqPReJLlBYzHP" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <div class="no" data-page-node-id="fDGEqmQeprzIqvUMiGgl9P">b.</div>
+        <h3 class="editable" data-page-node-id="xf9uKluBOW1CLw8dRyaDvF">Office Software</h3>
+        <p class="editable" style="white-space:pre-wrap" data-page-node-id="hEjcJrUUNZH18tWok7LiPw">Driver's license (C1)
+Proficient in Microsoft Office and other common office tools</p>
+      </div>
+      <div class="skill" data-page-node-id="43QLjWTppH28ITRb4kmMtt" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <div class="no" data-page-node-id="PPLP32bxyrjuN49KldFOcJ">c.</div>
+        <h3 class="editable" data-page-node-id="ZAlXVSWqA8gIvoaC1bfk3l">Interests</h3>
+        <p class="editable" data-page-node-id="i61sH1PCOspvjTQkLHfiRz">Table tennis、Psychological books、Music、Guitar......</p>
+      </div>
+    </div>
+  </section></div>
+</div>
+
+<div class="screen tall" data-screen="6" data-label="Contact" aria-label="Contact" data-page-node-id="OWTDwNi3UmFnef3dUvkfTE" aria-hidden="true" style="transition: none; transform: translateY(9%); opacity: 0; z-index: 0;">
+  <div class="container" data-page-node-id="Bi0GRp15u956fEMudgw3Xj"><section id="contact" class="contact" data-page-node-id="uM6UcneBPGDx72x3iPIZTw">
+    <div class="sec-head reveal visible" data-page-node-id="AgXAY7htx2CgFgiYAVe0g9" style="transition: none; transform: translateY(24px); opacity: 0;">
+      <div class="sec-num" data-page-node-id="jaLAaTldonEdrjTdI04HhS">06</div>
+      <h2 class="sec-title editable" data-page-node-id="FctL5UlZtOW7G1fOKgKvOt">Contact<span class="zh editable" data-page-node-id="wkeaG4MkLV6mHH53LtFys6">联系我<div class="sec-side editable" style="white-space: pre-wrap; cursor: text;" data-page-node-id="AwY86ZJHNSPRDraXfUTGPD">Currently seeking personal way to the word.​​</div></span></h2>
+      
+    </div>
+    <div class="contact-inner reveal visible" data-page-node-id="Leqnl6wBMoXXxd2F3xMark">
+      <h2 class="editable" data-page-node-id="oUBYZA0IT8OoGLvZz8XQgp" style="transition: none; transform: translateY(24px); opacity: 0;">Say <em data-page-node-id="aTpo28cVJSxc5mEPDvrWAH">hello.</em></h2>
+      <div class="contact-actions" data-page-node-id="AN3Tc3NRfKxJg3IB125dSp" style="transition: none; transform: translateY(24px); opacity: 0;">
+        <a class="btn-send" href="mailto:wsytxybzdfs@qq.com" data-page-node-id="zAlphI4HACujCqjDleWgNP">Send Message →</a>
+        <div class="contact-links" data-page-node-id="5JnlglEKYeNTlMbOcigAd7">
+          <a href="mailto:wsytxybzdfs@qq.com" class="editable" style="white-space: pre-wrap;" data-page-node-id="MnDVd2eN5vTh9y0ld6WYXd">Email : wsytxybzdfs@qq.com
+Wechat : lpoimmm
+</a><a href="tel:+8615641080306" class="editable" style="color: rgb(139, 139, 148);" data-page-node-id="3muSxH5RA10GOjlDKhG0qV">Num : +86 156 4108 0306​</a>
+<a href="tel:+8615641080306" class="editable" style="" data-page-node-id="G0yp7NGvm1vOcA7ByOKkHn"></a>
+          
+        </div>
+      </div>
+    </div>
+  </section></div>
+</div>
+
+<div class="screen contact-screen tall" data-screen="7" data-label="Outro" aria-label="Outro" data-page-node-id="emWtsAbDkBKruG3hCnKJIK" aria-hidden="true" style="transition: none; transform: translateY(9%); opacity: 0; z-index: 0;">
+  <div class="container" data-page-node-id="H202vj2lVufcGapGV768ZS"><footer class="screen-body" data-page-node-id="t1behlBiNhZIuaGp4YlP94">
+  <div class="container" data-page-node-id="sMQ4n1uCDKtnCs7peR8SNA">
+    <div class="foot-grid" data-page-node-id="GGvFM78U5FsxR4MM3jt94F" style="transition: none; transform: translateY(24px); opacity: 0;">
+      <div data-page-node-id="ugru2rUDxNFy1FuOmzCTm1">
+        <div class="foot-logo editable" style="cursor: text; color: rgb(0, 0, 0);" data-page-node-id="bUx3ZkRND9alBBJvA6kuKU">Melanie Hu<font color="#d98bab" data-page-node-id="8K67Hz7JgSn2ERZhkO4FUG"><i data-page-node-id="RQLu4RbfWmEbZTgF6PE4X1">&nbsp;</i></font></div>
+        <div class="foot-tag editable" data-page-node-id="83yoWCTXYLlzCKdB8ggNC8">looking forward to meeting you.</div>
+        
+      </div>
+      <div class="foot-col" data-page-node-id="P0SrKtT3YifUT2VKYcVpDz">
+        <h4 data-page-node-id="brmdgm7qPB1KQmS5GaxU6Y">Navigation</h4>
+        <a href="#edu" data-page-node-id="z24eVWY0cU4VptXr4h7AT7">Education</a>
+        <a href="#exp" data-page-node-id="zfpjqwDOqCl32XD4fiGfro">Experience</a>
+        <a href="#campus" data-page-node-id="M2lO73tFWDBWYQmZQK48Mq">Campus</a>
+        <a href="#awards" data-page-node-id="dGI7a4ZNCOgOBivksdoB8I">Honors</a>
+        <a href="#contact" data-page-node-id="gsXkNXjK6diehi27t84kbT">Contact</a>
+      </div>
+      <div class="foot-col" data-page-node-id="KPHXbMObwhsayNttpCDO0C">
+        <h4 data-page-node-id="EwDh4umakbPXDGeNDp5C08">Location</h4>
+        <span class="editable" data-page-node-id="7dPRVGYdijEnJc82dJxuDz">Beijing, China</span>
+        <span class="editable" data-page-node-id="WiYdCg0JGRNgPEAEtlyZoy">Open to work on site</span>
+      </div>
+    </div>
+    <div class="foot-bottom" data-page-node-id="HHRJr2jTd23qDCoBIh7pbv" style="transition: none; transform: translateY(24px); opacity: 0;">
+      <span class="editable" data-page-node-id="ncbJsgvFsDbH3GCPigkBiX">© 2026 Melanie Hu · Personal Website</span>
+      <span class="editable" data-page-node-id="nruaAthYti1NCY7Uj6xp6t">Designed &amp; built in Beijing</span>
+    </div>
+  </div>
+</footer></div>
+</div>
+</div>
+
+<!-- ============ 分页指示器 ============ -->
+<div class="pager" id="pager" role="tablist" aria-label="Sections" data-page-node-id="oTD8S6ZRW0wtLJrZzOD6Ts"><button type="button" role="tab" class="" aria-selected="false" data-page-node-id="uK9GRzQEq7caM3brYOPyYc"><span class="pg-label" data-page-node-id="G4F0DNIYreuEU1wUgWrZlB">Intro</span><span class="pg-dot" data-page-node-id="xzP1ExLaHXz1Q5NLk3IItC"></span></button><button type="button" role="tab" aria-selected="false" class="" data-page-node-id="Jzvb7l1Ttye2vLjtG9tNk2"><span class="pg-label" data-page-node-id="SFNYKrZ2AMv9cHdcuIRG0y">Education</span><span class="pg-dot" data-page-node-id="nXiQhawVoIo7qo5PRU6MCv"></span></button><button type="button" role="tab" aria-selected="false" class="" data-page-node-id="HxJ8HzTzZl1aZm5aYbgyTt"><span class="pg-label" data-page-node-id="RWHYhxxO6cDfv3CseQgvyl">Experience</span><span class="pg-dot" data-page-node-id="TB541SxNd4WVXso7qkgyDU"></span></button><button type="button" role="tab" aria-selected="false" class="" data-page-node-id="0Wso34wP8V2HxVOAHebBvj"><span class="pg-label" data-page-node-id="N4Jfv8n6vr18jke7CR5txi">Campus</span><span class="pg-dot" data-page-node-id="SANhsGLWNYp8NUiALotTIs"></span></button><button type="button" role="tab" aria-selected="false" class="" data-page-node-id="SGNXyT0utuIcvkHIMOPF9m"><span class="pg-label" data-page-node-id="wVdFgMX2eGdrlyVvsvgdY6">Honors</span><span class="pg-dot" data-page-node-id="5F4HMCiCezBYS625NmhWed"></span></button><button type="button" role="tab" aria-selected="false" class="" data-page-node-id="NCts1QjrQVUkM4b6XzzwFl"><span class="pg-label" data-page-node-id="ODmiu15c8uq6CM4AqA5M2g">Skills</span><span class="pg-dot" data-page-node-id="H4QETDRg9Gy91M1LJCGCpD"></span></button><button type="button" role="tab" aria-selected="true" class="active" data-page-node-id="fHVJPzjZidp4K3yh9NgwZT"><span class="pg-label" data-page-node-id="hnN2LasCa3quEHe0XwfmgM">Contact</span><span class="pg-dot" data-page-node-id="H6JwIMrtLffr1hCE79bCi1"></span></button><button type="button" role="tab" aria-selected="false" data-page-node-id="Bc1npVJD7OXiwgNqZ22Ghw"><span class="pg-label" data-page-node-id="nwW7SFv31rgQ4CkFEncAtX">Outro</span><span class="pg-dot" data-page-node-id="FoUVyh4DCZBXQoGzRK4NMl"></span></button><button type="button" role="tab" class="" aria-selected="false" data-page-node-id="rzjzqZRzA3M4t82DUV2OFH"><span class="pg-label" data-page-node-id="D0jfKufM7ZkC0Mm4U1qIj0">Intro</span><span class="pg-dot" data-page-node-id="qJz07kWOqBqVg4oSNWih9F"></span></button><button type="button" role="tab" aria-selected="true" class="active" data-page-node-id="cDsSQtm0coAr0DxO6qaBvM"><span class="pg-label" data-page-node-id="bCiLmYsIwqImtTCkOY5Cmo">Education</span><span class="pg-dot" data-page-node-id="ebU1dQoSArecsEzWeeanws"></span></button><button type="button" role="tab" aria-selected="false" data-page-node-id="hKqESyE0AZrBe7BuUNHEfw"><span class="pg-label" data-page-node-id="59b4h0KIetl2PoRDSHLPc2">Experience</span><span class="pg-dot" data-page-node-id="uwUu1JPZXtKv28LtmVO2Qe"></span></button><button type="button" role="tab" aria-selected="false" data-page-node-id="xpIqUfOjlymFdPHidJOFmu"><span class="pg-label" data-page-node-id="NhjOKFaseF48m0hk7l4JKK">Campus</span><span class="pg-dot" data-page-node-id="qBlpsMjMwbYe5F35GpErvv"></span></button><button type="button" role="tab" aria-selected="false" data-page-node-id="wGSl5vq1JnHfsZVqUdpcsI"><span class="pg-label" data-page-node-id="Ojln5n8k8pkJfgTm3XQY8w">Honors</span><span class="pg-dot" data-page-node-id="YAFHj6JlAET1G8MNLvRBZr"></span></button><button type="button" role="tab" aria-selected="false" data-page-node-id="qb2w0cv0OhrLjCl0KrzmJV"><span class="pg-label" data-page-node-id="rfSq4w0eqYheR9pBt2G7le">Skills</span><span class="pg-dot" data-page-node-id="gysndv8EkfKBDZYPBlYDNU"></span></button><button type="button" role="tab" aria-selected="false" data-page-node-id="HcDhCFyQlM1g9RhRD2la5v"><span class="pg-label" data-page-node-id="AaJEXozRGIqxBnqCryusPc">Contact</span><span class="pg-dot" data-page-node-id="zr0cUPELFoUw93wUIzRHJO"></span></button><button type="button" role="tab" aria-selected="false" data-page-node-id="3oMHMHwOmbO6kvMViuVpkO"><span class="pg-label" data-page-node-id="r28HwxvqQMjqbCjy44gJKY">Outro</span><span class="pg-dot" data-page-node-id="pvXN151d1AUF4fxciuj1Fw"></span></button><button type="button" role="tab" class="active" aria-selected="true"><span class="pg-label">Intro</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false" class=""><span class="pg-label">Education</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Experience</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Campus</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Honors</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Skills</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Contact</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Outro</span><span class="pg-dot"></span></button><button type="button" role="tab" class="" aria-selected="false"><span class="pg-label">Intro</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false" class=""><span class="pg-label">Education</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="true" class="active"><span class="pg-label">Experience</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Campus</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Honors</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Skills</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Contact</span><span class="pg-dot"></span></button><button type="button" role="tab" aria-selected="false"><span class="pg-label">Outro</span><span class="pg-dot"></span></button></div>
+
+<!-- ============ 翻页提示 ============ -->
+<div class="page-cue" id="pageCue" data-page-node-id="uzW6iDLx0upLAIXJO4IZDo"><span data-page-node-id="rv6ioOCFjs5CM5AIsR4CLl">Scroll</span><span class="cue-arrow" data-page-node-id="DkEBvP5NrGcjX44Vju2Fpj">↓</span></div>
+
+<!-- ============ Settings Panel ============ -->
+<button class="settings-fab" id="fab" title="Customize" data-page-node-id="7D4zwwe66GBQGqjPKiZ0iL">⚙️</button>
+<div class="settings-panel" id="panel" data-page-node-id="TENMptnkX9dgbviDdUaPtm">
+  <div class="sp-head" data-page-node-id="SpxcFDNqaXspwIByVAZFzC">✦ Customize</div>
+  <div class="sp-group" data-page-node-id="HVdx3iTvRka1QgfrUNdW64">
+    <label data-page-node-id="H1UFEDVGCYGsYC2mWaEpTS">Accent Color</label>
+    <div class="swatches" id="swatches" data-page-node-id="rb4aHHOSk3vK1j3f1mAYBH"><button class="swatch" title="Dreamy" data-hex="#678EC9" style="background: linear-gradient(135deg, rgb(255, 206, 227), rgb(103, 142, 201), rgb(38, 34, 119));"></button><button class="swatch" title="Ocean" data-hex="#5b8fc9" style="background: rgb(91, 143, 201);"></button><button class="swatch" title="Rose" data-hex="#d4719a" style="background: rgb(212, 113, 154);"></button><button class="swatch" title="Mint" data-hex="#45b39a" style="background: rgb(69, 179, 154);"></button><button class="swatch" title="Amber" data-hex="#b98a5b" style="background: rgb(185, 138, 91);"></button><input type="color" class="custom-color" title="Custom color"></div>
+  </div>
+  <div class="sp-group" data-page-node-id="TALDWBgfc9SLTZgpGYFbPb">
+    <label data-page-node-id="8mtOP61xdRMUgnKM01Wk2P">Edit Content</label>
+    <button class="sp-btn" id="editToggle" data-page-node-id="ySDk2UOtHhRdbiZ3BB1Y0z">✏️ Turn on Edit Mode</button>
+  </div>
+  <div class="sp-group" data-page-node-id="UlVgXrDGnJParAQ1XQwakv">
+    <label data-page-node-id="zeMJp4xxcL0y26LJcr3rqO">Change Portrait</label>
+    <input type="file" id="avatarInput" accept="image/*" data-page-node-id="E2CrxUsxNlDC0W9AbtJ7lV">
+  </div>
+  <div class="sp-row sp-group" data-page-node-id="CZV1TU9rrhTOHyjhwdfDIE">
+    <button class="sp-btn primary-btn" id="exportBtn" data-page-node-id="1g7ppfOCnvJh00hnf02a6i">Export Website</button>
+    <button class="sp-btn danger-btn" id="resetBtn" data-page-node-id="I4cMma4kGLM5oyClgYQ9Wk">Reset</button>
+  </div>
+  <p class="sp-tip" data-page-node-id="xsKXhGF0tJOthPGsSANkmD">💡 After turning on Edit Mode, click any text on the page to edit it (press Esc to exit). Changes are auto-saved in this browser; "Export Website" saves the current content and colors as a new HTML file.</p>
+</div>
+
+<div class="progress-chip" id="progressChip" data-page-node-id="JlUGEL6HCx8J5kJfijutHr">03 / 08</div>
+
+<script>
+  /* ============ Accent Theme ============ */
+  const PRESETS = [
+    { name: 'Dreamy', hex: '#678EC9' },
+    { name: 'Ocean',  hex: '#5b8fc9' },
+    { name: 'Rose',   hex: '#d4719a' },
+    { name: 'Mint',   hex: '#45b39a' },
+    { name: 'Amber',  hex: '#b98a5b' },
+  ];
+  const DEFAULT_VARS = {
+    '--primary': '#678EC9', '--primary-deep': '#262277',
+    '--pink': '#FFCEE3', '--pink-deep': '#d98bab',
+    '--hairline': '#e9e9ee', '--bg': '#fcfcfd',
+    '--glow': '0 10px 30px rgba(38, 34, 119, .16)',
+    '--wash': 'radial-gradient(900px 620px at 88% 8%, rgba(255,206,227,.30), transparent 62%), radial-gradient(820px 600px at 4% 88%, rgba(103,142,201,.16), transparent 60%)',
+  };
+  const hexToRgb = h => { h = h.replace('#',''); return [0,2,4].map(i => parseInt(h.slice(i, i+2), 16)); };
+  const hexOf = c => '#' + c.map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2,'0')).join('');
+  const mixW = (c, t) => c.map(v => v + (255 - v) * t);
+
+  function applyTheme(hex, exact) {
+    const r = document.documentElement.style;
+    if (exact) { Object.entries(DEFAULT_VARS).forEach(([k, v]) => r.setProperty(k, v)); return; }
+    const rgb = hexToRgb(hex);
+    const deep = rgb.map(v => Math.round(v * 0.45));
+    const pinkish = mixW(rgb, .72);
+    const rgba = (c, a) => `rgba(${c.map(Math.round).join(', ')}, ${a})`;
+    r.setProperty('--primary', hexOf(rgb));
+    r.setProperty('--primary-deep', hexOf(deep));
+    r.setProperty('--pink', hexOf(pinkish));
+    r.setProperty('--pink-deep', hexOf(rgb.map(v => v * 0.78)));
+    r.setProperty('--hairline', hexOf(mixW(rgb, .82)));
+    r.setProperty('--bg', hexOf(mixW(rgb, .965)));
+    r.setProperty('--glow', `0 10px 30px ${rgba(deep, .18)}`);
+    r.setProperty('--wash', `radial-gradient(900px 620px at 88% 8%, ${rgba(pinkish,.32)}, transparent 62%), radial-gradient(820px 600px at 4% 88%, ${rgba(rgb,.16)}, transparent 60%)`);
+  }
+
+  const swatchBox = document.getElementById('swatches');
+  swatchBox.innerHTML = ''; /* 云端编辑器快照会把 JS 生成的色板存回 HTML，先清空再重建避免重复 */
+  PRESETS.forEach((p, i) => {
+    const b = document.createElement('button');
+    b.className = 'swatch'; b.title = p.name; b.dataset.hex = p.hex;
+    b.style.background = i === 0
+      ? 'linear-gradient(135deg, #FFCEE3, #678EC9, #262277)'
+      : p.hex;
+    b.onclick = () => { applyTheme(p.hex, i === 0); setActive(b); saveTheme(p.hex, i === 0); };
+    swatchBox.appendChild(b);
+  });
+  const custom = document.createElement('input');
+  custom.type = 'color'; custom.className = 'custom-color'; custom.title = 'Custom color'; custom.value = '#678EC9';
+  custom.addEventListener('input', () => { applyTheme(custom.value); setActive(null); saveTheme(custom.value, false); });
+  swatchBox.appendChild(custom);
+
+  function setActive(el) {
+    document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+    if (el) el.classList.add('active');
+  }
+
+  const THEME_KEY = 'hyr_theme_v3';
+  function saveTheme(hex, exact) { try { localStorage.setItem(THEME_KEY, JSON.stringify({ hex, exact })); } catch(e){} }
+  (function restoreTheme() {
+    try {
+      const t = JSON.parse(localStorage.getItem(THEME_KEY) || 'null');
+      if (t && t.hex) { applyTheme(t.hex, t.exact); if (t.exact) setActive(swatchBox.querySelector(`[data-hex="${t.hex}"]`)); }
+    } catch(e){}
+  })();
+
+  /* ============ Edit Mode ============ */
+  const editables = [...document.querySelectorAll('.editable')];
+  const editBtn = document.getElementById('editToggle');
+  const CONTENT_KEY = 'hyr_content_v3';
+  function setEdit(on) {
+    document.body.classList.toggle('editing', on);
+    editables.forEach(el => el.contentEditable = on ? 'true' : 'false');
+    editBtn.textContent = on ? '✓ Editing · click to turn off' : '✏️ Turn on Edit Mode';
+    if (!on) saveContent();
+  }
+  editBtn.onclick = () => setEdit(!document.body.classList.contains('editing'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('editing')) setEdit(false); });
+  document.addEventListener('input', e => {
+    if (document.body.classList.contains('editing') && e.target.classList && e.target.classList.contains('editable')) saveContent();
+  });
+  function saveContent() {
+    try { localStorage.setItem(CONTENT_KEY, JSON.stringify(editables.map(e => e.innerHTML))); } catch(e){}
+  }
+  (function restoreContent() {
+    try {
+      const arr = JSON.parse(localStorage.getItem(CONTENT_KEY) || 'null');
+      if (Array.isArray(arr) && arr.length === editables.length) arr.forEach((h, i) => editables[i].innerHTML = h);
+    } catch(e){}
+  })();
+
+  /* ============ Change Portrait ============ */
+  const AVATAR_KEY = 'hyr_avatar_v3';
+  const avatarImg = document.getElementById('avatarImg');
+  document.getElementById('avatarInput').addEventListener('change', e => {
+    const f = e.target.files[0]; if (!f) return;
+    const rd = new FileReader();
+    rd.onload = () => {
+      avatarImg.src = rd.result;
+      try { localStorage.setItem(AVATAR_KEY, rd.result); } catch(err){}
+    };
+    rd.readAsDataURL(f);
+  });
+  (function restoreAvatar() {
+    try { const a = localStorage.getItem(AVATAR_KEY); if (a) avatarImg.src = a; } catch(e){}
+  })();
+
+  /* ============ Export / Reset ============ */
+  document.getElementById('exportBtn').onclick = function () {
+    const clone = document.documentElement.cloneNode(true);
+    clone.querySelectorAll('.editable').forEach(el => el.removeAttribute('contenteditable'));
+    clone.querySelector('body').classList.remove('editing');
+    const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+    const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'Melanie-Hu-Website.html';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    const t = this.textContent;
+    this.textContent = '✓ Exported';
+    setTimeout(() => this.textContent = t, 1600);
+  };
+  document.getElementById('resetBtn').onclick = () => {
+    try { localStorage.removeItem(THEME_KEY); localStorage.removeItem(CONTENT_KEY); localStorage.removeItem(AVATAR_KEY); } catch(e){}
+    location.reload();
+  };
+
+  /* ============ Panel Toggle ============ */
+  /* 开/关的实际动画由底部 Motion 引擎接管（enter 入场 / 整组淡出后退场），
+     这里只派发事件；引擎监听 panel:toggle / panel:close 完成播放。 */
+  const fab = document.getElementById('fab'), panel = document.getElementById('panel');
+  fab.onclick = e => { e.stopPropagation(); panel.dispatchEvent(new CustomEvent('panel:toggle')); };
+  document.addEventListener('click', e => {
+    if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== fab) panel.dispatchEvent(new CustomEvent('panel:close'));
+  });
+
+  /* ============ Page Indicator ============ */
+  /* 分页后没有整页滚动：页码文本由底部 Motion 分页控制器写入 */
+  const chip = document.getElementById('progressChip');
+  chip.textContent = '01 / 08';
+
+  /* ============ Scroll Reveal ============
+     已迁移至页面底部的 Motion（FLIP）引擎：滚动触发的位移动画、
+     GPA 进度条填充统一由引擎驱动，时长与缓动可配置。 */
+</script>
+
+<script>
+  /* ============================================================
+   * Motion —— FLIP 动画引擎 + 站点接入
+   * 整段 IIFE 封装：不向 window 暴露任何变量，不污染全局命名空间
+   * ============================================================ */
+  (function () {
+    'use strict';
+
+  /* ================================================================
+   * Motion —— 轻量 FLIP 动画引擎（整段 IIFE，不向 window 暴露任何变量）
+   *
+   * FLIP = First → Last → Invert → Play：
+   *   First  : DOM 变更前，记录元素位置（getBoundingClientRect）
+   *   Last   : 执行 DOM 变更（增删 / 挪动 / 换类名 / 换父节点……）
+   *   Invert : 用 transform 把元素瞬时"反放"回旧位置（无过渡）
+   *   Play   : 开启 transition 让 transform 归零，平滑滑到新位置
+   *
+   * 性能与闪烁（flicker）处理：
+   *   - 动画只写 transform / opacity（合成器属性，不触发布局与绘制）
+   *   - Invert 与 DOM 变更在同一帧内同步完成，随后只强制一次 reflow，
+   *     浏览器没有任何机会绘制"中间帧"→ 从根上杜绝闪烁
+   *   - 动画期间给元素加 will-change: transform 提示合成层，结束后移除
+   *   - autoFlip 用 rAF 采样（回调在本帧绘制之前执行，起始帧同帧呈现）
+   * ================================================================ */
+
+  /* ---------- 全局配置：时长 / 缓动 / 批量间隔，可用 configure() 修改 ---------- */
+  const state = {
+    duration: 500,                                  // 动画时长 ms
+    easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)',    // 缓动函数
+    stagger: 45                                     // 批量动画元素之间的间隔 ms
+  };
+  /* 系统开启"减弱动态效果"时自动禁用动画（无障碍） */
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    state.duration = 0; state.stagger = 0;
+  }
+  const cfg = o => {
+    const c = Object.assign({}, state);
+    if (o) for (const k in o) if (o[k] !== undefined) c[k] = o[k]; // 跳过 undefined，避免覆盖默认缓动/时长
+    return c;
+  };
+  function configure(patch) { Object.assign(state, patch); }
+
+  /* ---------- 小工具 ---------- */
+  const raf = window.requestAnimationFrame.bind(window);
+  const reflow = () => void document.body.offsetWidth; // 强制同步布局一次（整个批次只调一次）
+  const idOf = new WeakMap();      // 每元素动画代号：新动画会使旧动画的收尾失效
+  const animating = new WeakMap(); // 动画中标记：autoFlip 采样时跳过，避免 transform 污染测量
+
+  /* 反向缩放层：卡片尺寸变化时，对直接子层 .flip-inner 做 1/scale 反向缩放，
+   * 内容始终保持原始比例（FLIP scale 失真补偿），没有该层则跳过 */
+  const innerOf = el => el.querySelector(':scope > .flip-inner');
+
+  /* ================================================================
+   * 核心：playTo —— 把元素从给定起始状态补间回"自然状态"
+   *   start = { dx, dy, sx, sy, opacity }  相对自然位置的偏移/缩放/透明度
+   * ================================================================ */
+  function playTo(el, start, opts, delay) {
+    const c = cfg(opts);
+    delay = delay || 0;
+    const inner = innerOf(el);
+    const sx = start.sx == null ? 1 : start.sx;
+    const sy = start.sy == null ? 1 : start.sy;
+    const dx = start.dx || 0, dy = start.dy || 0;
+    const op = start.opacity;
+
+    const token = (idOf.get(el) || 0) + 1; // 动画代号：被打断的旧动画收尾作废
+    idOf.set(el, token);
+    animating.set(el, true);
+
+    /* --- Invert：无过渡，瞬时落到起始帧 --- */
+    el.style.willChange = 'transform, opacity';
+    el.style.transition = 'none';
+    el.style.transformOrigin = 'top left';
+    el.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)' +
+      ((sx !== 1 || sy !== 1) ? ' scale(' + sx + ', ' + sy + ')' : '');
+    if (op != null) el.style.opacity = op;
+    if (inner) {
+      inner.style.transition = 'none';
+      inner.style.transformOrigin = 'top left';
+      inner.style.transform = (sx !== 1 || sy !== 1) ? 'scale(' + (1 / sx) + ', ' + (1 / sy) + ')' : '';
+    }
+    reflow(); // ★ 防闪烁关键：同一帧内提交起始帧，不留绘制空隙
+
+    /* --- Play：开启过渡回到自然位置（只改 transform / opacity） --- */
+    const tr = 'transform ' + c.duration + 'ms ' + c.easing + ' ' + delay + 'ms, ' +
+               'opacity ' + c.duration + 'ms ' + c.easing + ' ' + delay + 'ms';
+    el.style.transition = tr;
+    el.style.transform = '';
+    el.style.opacity = '';
+    if (inner) {
+      inner.style.transition = 'transform ' + c.duration + 'ms ' + c.easing + ' ' + delay + 'ms';
+      inner.style.transform = '';
+    }
+
+    /* --- 收尾：清理内联样式（超时兜底，比 transitionend 更抗打断） --- */
+    setTimeout(() => {
+      if (idOf.get(el) !== token) return; // 期间开了新动画，本次收尾作废
+      el.style.transition = '';
+      el.style.willChange = '';
+      if (inner) inner.style.transition = '';
+      animating.set(el, false);
+    }, c.duration + delay + 80);
+  }
+
+  /* 判断元素位置/尺寸是否真的变了（0.5px 容差） */
+  function moved3d(f, n) {
+    return Math.abs(f.left - n.left) > .5 || Math.abs(f.top - n.top) > .5 ||
+           Math.abs(f.width - n.width) > .5 || Math.abs(f.height - n.height) > .5;
+  }
+
+  /* ================================================================
+   * flip(elements, mutate, opts) —— 通用批量 FLIP（多元素）
+   *   elements : 受影响的元素列表（批量，而非单个）
+   *   mutate   : 执行任意 DOM 变更的回调（类名 / 顺序 / 父节点……）
+   * 能力上等价于"在不同 DOM 状态/目标之间做 FLIP"：
+   * 变更前量一次（First），变更后量一次（Last），中间差异用 transform 补间。
+   * ================================================================ */
+  function flip(els, mutate, opts) {
+    const list = Array.from(els);
+    const c = cfg(opts);
+    /* 1) First：变更前统一测量（只读阶段，连续读取只触发一次布局） */
+    const firsts = new Map();
+    list.forEach(el => firsts.set(el, el.getBoundingClientRect()));
+    /* 2) Last：执行 DOM 变更 */
+    (mutate || function () {})();
+    /* 3+4) Invert + Play：批量补间，按 stagger 依次启动 */
+    let i = 0;
+    list.forEach(el => {
+      const f = firsts.get(el);
+      const n = el.getBoundingClientRect();
+      if (f && moved3d(f, n)) {
+        playTo(el, { dx: f.left - n.left, dy: f.top - n.top,
+                     sx: f.width / Math.max(n.width, .001), sy: f.height / Math.max(n.height, .001) },
+                opts, c.stagger * i++);
+      }
+    });
+  }
+
+  /* ================================================================
+   * enter(els, opts) —— 入场动画：从下方 24px、96% 缩放、透明 滑入
+   * ================================================================ */
+  function enter(els, opts) {
+    const c = cfg(opts);
+    Array.from(els).forEach((el, i) => {
+      playTo(el, { dx: 0, dy: (opts && opts.y) != null ? opts.y : 24,
+                   sx: .96, sy: .96, opacity: 0 }, opts, c.stagger * i);
+    });
+  }
+
+  /* ================================================================
+   * exit(el, opts) → Promise —— 出场动画
+   *   播放缩小淡出；Promise 在动画真正结束后才 resolve；
+   *   opts.remove !== false 时自动移除 DOM 节点（默认移除）。
+   *   实现要点：先把卡片"钉"在原位（position:absolute + 原矩形），
+   *   脱离文档流让兄弟节点立刻回流补位 —— 空洞的收拢交给
+   *   autoFlip / flip 做批量补间，本函数只负责体面的退场。
+   * ================================================================ */
+  function exit(el, opts) {
+    const c = cfg(opts);
+    return new Promise(resolve => {
+      if (!el || el.dataset.motionExit) { resolve(); return; }
+      el.dataset.motionExit = '1'; // 标记退场中：autoFlip 不再采样它
+      const rect = el.getBoundingClientRect();
+      const host = el.parentElement;
+      const hr = host.getBoundingClientRect();
+      const prev = { position: el.style.position, left: el.style.left, top: el.style.top,
+                     width: el.style.width, height: el.style.height, margin: el.style.margin, zIndex: el.style.zIndex };
+      /* 钉在原位：脱离文档流，但视觉位置一丝不变（含边框的容器需自行校正偏移） */
+      if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+      Object.assign(el.style, {
+        position: 'absolute',
+        left: (rect.left - hr.left) + 'px', top: (rect.top - hr.top) + 'px',
+        width: rect.width + 'px', height: rect.height + 'px',
+        margin: '0', zIndex: 6
+      });
+      /* Invert（保持原状）→ Play（缩小淡出，transform-origin 默认中心） */
+      el.style.transition = 'none';
+      el.style.transform = 'none';
+      reflow();
+      el.style.transition = 'transform ' + c.duration + 'ms ' + c.easing + ', opacity ' + c.duration + 'ms ' + c.easing;
+      el.style.transform = 'translateY(' + ((opts && opts.y) != null ? opts.y : 10) + 'px) scale(' +
+                           ((opts && opts.scale) != null ? opts.scale : .9) + ')';
+      el.style.opacity = '0';
+      /* ★ 等待动画结束后再移除 DOM：transitionend + 超时双保险 */
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        if (opts && opts.remove === false) { Object.assign(el.style, prev); delete el.dataset.motionExit; }
+        else { el.remove(); }
+        resolve();
+      };
+      el.addEventListener('transitionend', function h(e) {
+        if (e.target === el && e.propertyName === 'opacity') { el.removeEventListener('transitionend', h); finish(); }
+      });
+      setTimeout(finish, c.duration + 80);
+    });
+  }
+
+  /* ================================================================
+   * reparent(el, newParent, opts) —— 更换父节点，动画保持连贯
+   *   受影响集合 = 移动卡片 + 原父节点其余子元素 + 新父节点现有子元素，
+   *   对整个集合做一次批量 FLIP → 三方同时平滑归位。
+   * ================================================================ */
+  function reparent(el, newParent, opts) {
+    const oldParent = el.parentElement;
+    if (!oldParent || oldParent === newParent) return;
+    const affected = [el,
+      ...Array.from(oldParent.children).filter(x => x !== el),
+      ...Array.from(newParent.children)];
+    flip(affected, () => newParent.appendChild(el), opts);
+  }
+
+  /* ================================================================
+   * autoFlip(container, opts) —— Grid / Flex 布局变化"自动"过渡
+   *   用 rAF 逐帧采样子元素位置（只读），相邻两帧之间出现位移/尺寸
+   *   差异（类名切换、增删、排序……）就立即 invert+play。
+   *   rAF 回调在本帧绘制之前执行 → 起始帧与布局变化同帧呈现，
+   *   肉眼看不到跳变（防闪烁的第二重保障）。
+   *   注意：已删除的节点无法自动补动画 —— 出场请用 exit()。
+   * ================================================================ */
+  function autoFlip(container, opts) {
+    if (!container || container.dataset.motionAuto) return;
+    container.dataset.motionAuto = '1';
+    const c = cfg(opts);
+    let cache = new Map();   // el → 上一帧的自然矩形
+    let started = false;     // 首帧只建基线，不播动画
+    function sample() {
+      const els = Array.from(container.children).filter(el =>
+        el.nodeType === 1 && !el.dataset.motionExit);
+      /* 读阶段：一次性测量全部子元素 */
+      const next = new Map();
+      els.forEach(el => next.set(el, el.getBoundingClientRect()));
+      /* 写阶段：检测差异并补间 */
+      if (started) {
+        let i = 0;
+        els.forEach(el => {
+          const prev = cache.get(el);
+          const now = next.get(el);
+          if (animating.get(el)) { next.set(el, prev || now); return; } // 动画中保持旧基准，防 transform 污染
+          if (prev) {
+            if (moved3d(prev, now)) {
+              playTo(el, { dx: prev.left - now.left, dy: prev.top - now.top,
+                           sx: prev.width / Math.max(now.width, .001), sy: prev.height / Math.max(now.height, .001) },
+                      opts, c.stagger * i++);
+            }
+          } else if (!opts || opts.enter !== false) {
+            /* 新插入的子元素 → 自动入场 */
+            playTo(el, { dx: 0, dy: (opts && opts.enterY) != null ? opts.enterY : 18,
+                         sx: .96, sy: .96, opacity: 0 }, opts, c.stagger * i++);
+          }
+        });
+      }
+      cache = next;
+      started = true;
+      raf(sample);
+    }
+    raf(sample);
+  }
+
+  /* ================================================================
+   * bindScrollFlip(opts) —— 把位移动画绑定到页面滚动事件
+   *   trigger   : 触发参照元素（它的顶部越过触发线即触发）
+   *   els       : 要做位移动画的元素组（内部自动 stagger）
+   *   line      : 触发线，默认视口高度 85%
+   *   from      : 起始状态 { y, scale, opacity }
+   *   once      : true=只触发一次；false=滚回上方重置、可重复触发
+   *   滚动监听 passive + rAF 节流（一帧最多检测一次）。
+   * ================================================================ */
+  function bindScrollFlip(opts) {
+    const o = Object.assign({
+      trigger: null, els: [], line: () => window.innerHeight * .85,
+      from: { y: 70, scale: .94, opacity: 0 }, once: true,
+      stagger: 70, hideOnBind: true, onReveal: null
+    }, opts);
+    const els = Array.from(o.els).filter(Boolean);
+    if (!o.trigger || !els.length) return function () {};
+    const lineOf = () => (typeof o.line === 'function' ? o.line() : o.line);
+    let armed = true;
+    /* 同步落到起始帧（脚本在首帧绘制前执行，无闪烁） */
+    function hide() {
+      els.forEach(el => {
+        el.style.transition = 'none';
+        el.style.opacity = String(o.from.opacity != null ? o.from.opacity : 0);
+        el.style.transform = 'translateY(' + (o.from.y || 0) + 'px)' +
+          (o.from.scale != null && o.from.scale !== 1 ? ' scale(' + o.from.scale + ')' : '');
+      });
+    }
+    function reveal() {
+      armed = false;
+      els.forEach((el, i) =>
+        playTo(el, { dx: 0, dy: o.from.y || 0,
+                     sx: o.from.scale == null ? 1 : o.from.scale,
+                     sy: o.from.scale == null ? 1 : o.from.scale,
+                     opacity: o.from.opacity == null ? 0 : o.from.opacity },
+               { duration: o.duration, easing: o.easing }, (o.stagger || 0) * i));
+      if (o.onReveal) o.onReveal(els);
+    }
+    if (o.hideOnBind) { hide(); reflow(); }
+    function check() {
+      const top = o.trigger.getBoundingClientRect().top;
+      if (armed && top < lineOf()) {
+        reveal();
+      } else if (!o.once && !armed && top > lineOf() + 160) {
+        armed = true; hide(); // 滚回触发线上方 160px：重新隐藏并武装，可重复触发
+      }
+    }
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      raf(() => { ticking = false; check(); });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    check(); // 首次立即检测（处理首屏已在触发线内的情况）
+    return () => window.removeEventListener('scroll', onScroll);
+  }
+
+  /* ================================================================
+   * 站点接入 —— 分页式切屏（一屏一板块）+ 屏内卡片平移
+   *   全部使用上方引擎内部 API，不新增任何全局变量。
+   *   一屏一板块：每个 .screen 是 100vh 的层叠层，切换用 FLIP 平移，
+   *   不产生 document 级滚动；导航/滚轮/键盘/触屏/指示器都能翻页。
+   * ================================================================ */
+
+  let resetSkillFocus = null;    /* 技能卡聚焦的收起回调（由技能卡接入段赋值） */
+  const stage    = document.getElementById('stage');
+  const screens  = Array.from(stage.querySelectorAll('.screen'));
+  const pagerBox = document.getElementById('pager');
+  const cue      = document.getElementById('pageCue');
+  const TOTAL    = screens.length;
+
+  /* ---------- 版头让位：stage 顶端 = 导航栏下沿（实测高度，窗口变化自动跟随） ----------
+     分页屏幕全部住在 stage 里 → 无论内容多高、切页滑到哪，都不会钻到版头底下。 */
+  const navEl = document.querySelector('nav');
+  function fitLayout() {
+    /* ① 版头让位：stage 顶端 = 导航栏下沿（实测高度） */
+    document.documentElement.style.setProperty('--nav-h', navEl.offsetHeight + 'px');
+    /* ② 超高屏检测：内容超过一屏 → 顶对齐 + 屏内滚动（绝不顶到版头底下） */
+    screens.forEach(s => s.classList.toggle('tall', s.scrollHeight > s.clientHeight + 2));
+  }
+  fitLayout();
+  addEventListener('resize', fitLayout);
+  addEventListener('load', fitLayout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitLayout);
+  setTimeout(fitLayout, 350);   /* 字体换装后复查一次（字高变化会影响是否超高） */
+
+  /* ---- 分页节奏参数（想改手感只动这里） ---- */
+  const PAGE = {
+    duration: 900,                          // 单屏切换时长（各变体可单独覆写）
+    easing:   'cubic-bezier(.22,.61,.36,1)',// 高级感的缓出曲线（ease-out 家族）
+    stagger:  65,                           // 屏内元素依次入场的错开间隔
+    wheelThreshold: 42,                     // 滚轮累计阈值，过滤触控板抖动
+    lockMs: 940                             // 切页期间锁定，防连翻
+  };
+
+  /* ================================================================
+   * 切屏动画变体 —— 每次切屏换一种，相邻两次绝不重复
+   *   设计原则：全部只动 transform + opacity（不触发重排、不闪烁），
+   *   幅度克制（≤10% 位移 / ≤4% 缩放），缓动统一走 ease-out，高级不花哨。
+   *   每个变体定义两件事：
+   *     screen(dir) → { out, in }  整屏的起始/结束姿态
+   *     inner(dir, i, n) → { out, in }  屏内元素姿态（i = 序号，用于错开）
+   * ================================================================ */
+  const VARIANTS = [
+    {
+      /* 01 经典上滑：最稳的媒体感，首屏默认 */
+      name: 'slide',
+      screen: dir => ({
+        out: { transform: 'translateY(' + (-dir * 9) + '%)', opacity: 0 },
+        in:  { transform: 'translateY(' + (dir * 9) + '%)', opacity: 0 }
+      }),
+      inner: (dir, i) => ({
+        out: { transform: 'translateY(' + (-dir * 18) + 'px)', opacity: 0 },
+        in:  { transform: 'translateY(' + (dir * 24) + 'px)', opacity: 0 }
+      })
+    },
+    {
+      /* 02 推挤：新屏像被推上来，旧屏同步让位，空间纵深感 */
+      name: 'push',
+      duration: 940,
+      screen: dir => ({
+        out: { transform: 'translateY(' + (-dir * 22) + '%)', opacity: .0 },
+        in:  { transform: 'translateY(' + (dir * 100) + '%)', opacity: 1 }
+      }),
+      inner: (dir, i) => ({
+        out: { transform: 'translateY(' + (-dir * 10) + 'px)', opacity: 0 },
+        in:  { transform: 'translateY(' + (dir * 26) + 'px)', opacity: 0 }
+      })
+    },
+    {
+      /* 03 呼吸缩放：轻微退后 / 轻微靠近，安静但有层次 */
+      name: 'zoom',
+      duration: 860,
+      easing: 'cubic-bezier(.32,.72,.28,1)',
+      screen: dir => ({
+        out: { transform: 'scale(.955)', opacity: 0 },
+        in:  { transform: 'scale(1.035)', opacity: 0 }
+      }),
+      inner: (dir, i) => ({
+        out: { transform: 'scale(1.02)', opacity: 0 },
+        in:  { transform: 'scale(.98)', opacity: 0 }
+      })
+    },
+    {
+      /* 04 帘幕：整屏纯粹淡入淡出，最安静的一种，用于节奏变化 */
+      name: 'veil',
+      duration: 820,
+      easing: 'cubic-bezier(.4,0,.2,1)',
+      screen: dir => ({
+        out: { transform: 'none', opacity: 0 },
+        in:  { transform: 'none', opacity: 0 }
+      }),
+      inner: (dir, i) => ({
+        out: { transform: 'none', opacity: 0 },
+        /* 纯淡入时靠错开延时制造韵律，不靠位移 */
+        in:  { transform: 'none', opacity: 0 }
+      })
+    },
+    {
+      /* 05 侧向让位：横向 4% 平移，与纵向节奏形成对比 */
+      name: 'side',
+      duration: 900,
+      easing: 'cubic-bezier(.25,.8,.3,1)',
+      screen: dir => ({
+        out: { transform: 'translateX(' + (-dir * 5) + '%)', opacity: 0 },
+        in:  { transform: 'translateX(' + (dir * 5) + '%)', opacity: 0 }
+      }),
+      inner: (dir, i) => ({
+        out: { transform: 'translateX(' + (-dir * 16) + 'px)', opacity: 0 },
+        in:  { transform: 'translateX(' + (dir * 20) + 'px)', opacity: 0 }
+      })
+    },
+    {
+      /* 06 错位浮起：屏内元素自下浮起 + 整屏极轻的缩放，收尾屏用它最有仪式感 */
+      name: 'lift',
+      duration: 920,
+      screen: dir => ({
+        out: { transform: 'translateY(' + (-dir * 6) + '%) scale(.985)', opacity: 0 },
+        in:  { transform: 'translateY(' + (dir * 6) + '%) scale(1.015)', opacity: 0 }
+      }),
+      inner: (dir, i, n) => ({
+        out: { transform: 'translateY(' + (-dir * 14) + 'px)', opacity: 0 },
+        /* 从更下方浮起，错开更明显 */
+        in:  { transform: 'translateY(' + (dir * 40) + 'px)', opacity: 0 }
+      })
+    }
+  ];
+
+  /* 取变体：按"切换次数"轮换，并跳过上一次用过的那个 —— 保证相邻不重复 */
+  let switchCount = 0;
+  let lastVariant = -1;
+  function pickVariant(firstJump) {
+    /* 首次进入某屏（含深链）用最稳的 slide；之后逐次轮换，绝不与上次相同 */
+    if (firstJump) return 0;
+    let v = switchCount % VARIANTS.length;
+    if (v === lastVariant) v = (v + 1) % VARIANTS.length;
+    return v;
+  }
+
+  function pageCfg(o) {   /* 合并选项：跳过 undefined，避免覆盖默认缓动 */
+    const r = {};
+    ['duration', 'easing', 'stagger'].forEach(k => r[k] = PAGE[k]);
+    if (o) for (const k in o) if (o[k] !== undefined) r[k] = o[k];
+    return r;
+  }
+
+  let index = 0;          // 当前屏
+  let locked = false;     // 切页锁
+  let lockTimer = null;
+
+  /* ---------- 屏内元素：切页时做 stagger 平移（"卡片平移"） ---------- */
+  function innerEls(screen) {
+    return Array.from(screen.querySelectorAll(
+      '.sec-head, .edu-name, .row, .skill, .contact-inner > *, .hero-grid > *, .foot-grid, .foot-bottom'));
+  }
+
+  /* 把某个姿态写进元素（transition:none + 同帧 reflow 提交 → 无闪烁） */
+  function place(el, pose, commit) {
+    el.style.transition = 'none';
+    if (pose.transform) el.style.transform = pose.transform;
+    else el.style.transform = 'none';
+    el.style.opacity = String(pose.opacity == null ? 1 : pose.opacity);
+    if (commit) reflow();
+  }
+
+  /* ---------- 初始化：全部屏归位，只显示第 0 屏 ---------- */
+  screens.forEach((s, i) => {
+    const v = VARIANTS[0];
+    const home = { transform: 'none', opacity: 1 };
+    const idle = v.screen(1).in;
+    s.style.transition = 'none';
+    s.style.transform = i === 0 ? home.transform : idle.transform;
+    s.style.opacity = i === 0 ? '1' : '0';
+    s.setAttribute('aria-hidden', i === 0 ? 'false' : 'true');
+    s.style.zIndex = i === 0 ? 2 : 1;
+    /* 屏内元素先落到起始帧（脚本在首帧绘制前执行 → 无闪烁） */
+    innerEls(s).forEach(el => {
+      const p = i === 0 ? home : v.inner(1, 0, 0).in;
+      el.style.transition = 'none';
+      el.style.transform = p.transform || 'none';
+      el.style.opacity = i === 0 ? '1' : '0';
+    });
+  });
+
+  /* ---------- 指示器：一屏一个圆点 ---- */
+  const dockBtns = screens.map((s, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.innerHTML = '<span class="pg-label">' + s.dataset.label + '</span><span class="pg-dot"></span>';
+    b.addEventListener('click', () => go(i));
+    pagerBox.appendChild(b);
+    return b;
+  });
+  function syncDock() {
+    dockBtns.forEach((b, i) => {
+      b.classList.toggle('active', i === index);
+      b.setAttribute('aria-selected', i === index ? 'true' : 'false');
+    });
+    chip.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(TOTAL).padStart(2, '0');
+    cue.classList.toggle('hidden', index === TOTAL - 1);
+  }
+
+  /* ---------- 屏内元素：按变体姿态依次入场 / 离场 ---------- */
+  function playInner(screen, variant, dir, entering, opts) {
+    const els = innerEls(screen);
+    if (!els.length) return;
+    const c = pageCfg(opts);
+    const n = els.length;
+    els.forEach((el, i) => {
+      const pose = variant.inner(dir, i, n);
+      const start = entering ? pose.in : { transform: 'none', opacity: 1 };
+      const end   = entering ? { transform: 'none', opacity: 1 } : pose.out;
+      /* 想让"从下方浮起"读起来自然，入场时元素按序错开；离场时倒序收走更干净 */
+      const order  = entering ? i : (n - 1 - i);
+      const delay  = c.stagger * order;
+      if (entering) place(el, start, true);
+      el.style.transition = 'transform ' + c.duration + 'ms ' + c.easing + ' ' + delay + 'ms, ' +
+                            'opacity ' + c.duration + 'ms ' + c.easing + ' ' + delay + 'ms';
+      if (end.transform) el.style.transform = end.transform;
+      else el.style.transform = 'none';
+      el.style.opacity = String(end.opacity == null ? 1 : end.opacity);
+
+      setTimeout(() => {
+        if (entering) {
+          if (index !== screens.indexOf(screen)) return;  // 期间又切走了
+          el.style.transition = '';
+          el.style.transform = '';
+          el.style.opacity = '';
+        } else {
+          /* 离场收尾：整体回到"待命"姿态，下次入场由 place() 重新定位 */
+          el.style.transition = 'none';
+          el.style.transform = 'none';
+          el.style.opacity = '0';
+        }
+      }, c.duration + delay + 60);
+    });
+  }
+
+  /* ================================================================
+   * 核心：切屏 —— 每次换一种动画（相邻不重复），只动 transform/opacity
+   * ================================================================ */
+  function go(target, opts) {
+    if (locked) return;
+    target = Math.max(0, Math.min(TOTAL - 1, target));
+    if (target === index) return;
+
+    const dir      = target > index ? 1 : -1;   // 1 = 向后翻（下一屏）
+    const from     = screens[index];
+    const to       = screens[target];
+    const vi       = pickVariant(opts && opts.first);
+    const variant  = VARIANTS[vi];
+    const c        = pageCfg({ duration: variant.duration, easing: variant.easing,
+                               stagger: (opts && opts.stagger) != null ? opts.stagger : PAGE.stagger });
+    const pose     = variant.screen(dir);
+
+    locked = true;
+    clearTimeout(lockTimer);
+    lockTimer = setTimeout(() => { locked = false; }, c.duration + 40);
+
+    /* --- 离场屏：从自然位 → 离场姿态 --- */
+    place(from, { transform: 'none', opacity: 1 }, true);
+    from.style.transition = 'transform ' + c.duration + 'ms ' + c.easing + ', opacity ' +
+                            Math.round(c.duration * .85) + 'ms ' + c.easing;
+    from.style.transform = pose.out.transform;
+    from.style.opacity = String(pose.out.opacity);
+    playInner(from, variant, dir, false, { duration: c.duration, easing: c.easing, stagger: c.stagger });
+
+    /* --- 入场屏：先落到入场起始姿态 → 归位（同一帧提交，无缝衔接） --- */
+    to.style.zIndex = 3;
+    place(to, pose.in, true);
+    to.style.transition = 'transform ' + c.duration + 'ms ' + c.easing + ', opacity ' +
+                          Math.round(c.duration * .9) + 'ms ' + c.easing;
+    to.style.transform = 'none';
+    to.style.opacity = '1';
+    playInner(to, variant, dir, true, { duration: c.duration, easing: c.easing, stagger: c.stagger });
+
+    /* --- 收尾：离场屏归位待命（姿态取反侧，避免下次切换闪烁） --- */
+    setTimeout(() => {
+      if (screens.indexOf(from) === index) return;   // 期间又切回来了
+      const idle = variant.screen(dir).out;
+      from.style.transition = 'none';
+      from.style.transform = idle.transform;
+      from.style.opacity = '0';
+      innerEls(from).forEach(el => {
+        el.style.transition = 'none';
+        el.style.transform = 'none';
+        el.style.opacity = '0';
+      });
+    }, c.duration + 80);
+
+    /* --- 更新状态 --- */
+    screens.forEach((s, i) => {
+      s.style.zIndex = i === target ? 2 : (i === index ? 1 : 0);
+      s.setAttribute('aria-hidden', i === target ? 'false' : 'true');
+    });
+    index = target;
+    switchCount++;
+    lastVariant = vi;
+    syncDock();
+    setTimeout(fitLayout, 60);   /* 落定后复查目标屏是否超高 */
+    /* 离开 Skills 屏时收起卡片聚焦，防止放大态被带到下一屏 */
+    if (target !== 5 && resetSkillFocus) resetSkillFocus();
+    if (history.replaceState) history.replaceState(null, '', '#' + (target === 0 ? 'top' : 'p' + target));
+  }
+  const next = () => go(index + 1);
+  const prev = () => go(index - 1);
+
+  /* ---------- 输入：滚轮（带阈值 + 方向锁） ---------- */
+  let wheelAcc = 0, wheelTimer = null;
+  stage.addEventListener('wheel', e => {
+    /* 屏内可滚动区域优先滚动自身 */
+    const scrollable = e.target.closest('.screen-inner-scroll, .screen.tall, .settings-panel');
+    if (scrollable && scrollable.scrollHeight > scrollable.clientHeight + 1) {
+      const atTop    = scrollable.scrollTop <= 1;
+      const atBottom = scrollable.scrollTop >= scrollable.scrollHeight - scrollable.clientHeight - 1;
+      /* 内部还有滚动余地 → 交给内部滚动；已到顶/底边界 → 放行翻页 */
+      if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) return;
+    }
+    e.preventDefault();
+    if (locked) return;
+    wheelAcc += e.deltaY;
+    clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(() => { wheelAcc = 0; }, 140);
+    if (Math.abs(wheelAcc) < PAGE.wheelThreshold) return;
+    const dir = wheelAcc > 0 ? 1 : -1;
+    wheelAcc = 0;
+    dir > 0 ? next() : prev();
+  }, { passive: false });
+
+  /* ---------- 输入：键盘 ---------- */
+  addEventListener('keydown', e => {
+    if (document.body.classList.contains('editing')) return;   // 编辑模式下不抢按键
+    const t = e.target;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    const k = e.key;
+    if (k === 'ArrowDown' || k === 'PageDown' || k === ' ' || k === 'Enter') { e.preventDefault(); next(); }
+    else if (k === 'ArrowUp' || k === 'PageUp') { e.preventDefault(); prev(); }
+    else if (k === 'Home') { e.preventDefault(); go(0); }
+    else if (k === 'End') { e.preventDefault(); go(TOTAL - 1); }
+    else if (k === 'Escape') { closePanel(); }
+  });
+
+  /* ---------- 输入：触屏手势（纵向滑动翻页） ---------- */
+  let touchY = null, touchX = null;
+  stage.addEventListener('touchstart', e => {
+    if (e.touches.length !== 1) return;
+    touchY = e.touches[0].clientY; touchX = e.touches[0].clientX;
+  }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    if (touchY == null || !e.changedTouches.length) return;
+    const dy = touchY - e.changedTouches[0].clientY;
+    const dx = touchX - e.changedTouches[0].clientX;
+    touchY = touchX = null;
+    if (Math.abs(dy) < 46 || Math.abs(dy) < Math.abs(dx)) return;
+    dy > 0 ? next() : prev();
+  }, { passive: true });
+
+  /* ---------- 导航栏 / 页脚链接 → 翻到对应屏 ---------- */
+  const ANCHORS = { edu: 1, exp: 2, campus: 3, awards: 4, skills: 5, contact: 6 };
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    if (!(id in ANCHORS)) return;
+    a.addEventListener('click', e => { e.preventDefault(); go(ANCHORS[id]); });
+  });
+  /* 品牌名回到首屏 */
+  const logo = document.querySelector('.nav-logo');
+  if (logo) { logo.style.cursor = 'pointer'; logo.addEventListener('click', () => go(0)); }
+
+  /* ---------- 深链：#p3 直接定位到第 3 屏 ---------- */
+  (function fromHash() {
+    const m = /^#p(\d)$/.exec(location.hash);
+    if (m) { const t = Math.min(TOTAL - 1, Math.max(0, +m[1])); if (t) go(t, { first: true }); }
+  })();
+
+  syncDock();
+
+  /* ---------- 首屏入场：用最稳的上滑变体，逐行浮现 ---------- */
+  setTimeout(() => {
+    const hero = screens[0];
+    const v = VARIANTS[0];
+    const els = innerEls(hero);
+    els.forEach((el, i) => place(el, v.inner(1, i, els.length).in, false));
+    reflow();
+    playInner(hero, v, 1, true, { duration: 820, stagger: 70 });
+  }, 60);
+
+  /* ---------- 设置面板：fixed 定位，动画走直接补间（同前） ---------- */
+  const panelEl = document.getElementById('panel');
+  const panelRows = Array.from(panelEl.children);
+  let panelBusy = false;
+  function openPanel() {
+    if (panelBusy || panelEl.classList.contains('open')) return;
+    panelBusy = true;
+    panelEl.classList.add('open');
+    enter(panelRows, { duration: 320, y: 14, stagger: 45 });
+    setTimeout(() => { panelBusy = false; }, 700);
+  }
+  function closePanel() {
+    if (panelBusy || !panelEl.classList.contains('open')) return;
+    panelBusy = true;
+    panelRows.forEach((el, i) => {
+      const d = 'ms cubic-bezier(.4,0,.2,1) ' + (i * 25) + 'ms';
+      el.style.transition = 'transform 200ms' + d + ', opacity 200ms' + d;
+      el.style.transform = 'translateY(8px) scale(.98)';
+      el.style.opacity = '0';
+    });
+    setTimeout(() => {
+      panelEl.classList.remove('open');
+      panelRows.forEach(el => { el.style.transition = ''; el.style.transform = ''; el.style.opacity = ''; });
+      panelBusy = false;
+    }, 200 + (panelRows.length - 1) * 25 + 60);
+  }
+  panelEl.addEventListener('panel:toggle', () => panelEl.classList.contains('open') ? closePanel() : openPanel());
+  panelEl.addEventListener('panel:close', closePanel);
+
+  /* ---------- 主题切换后：当前屏内元素重新浮现一次（视觉反馈） ---------- */
+  document.querySelectorAll('.swatch, .custom-color').forEach(sw => {
+    sw.addEventListener('click', () => setTimeout(() => {
+      playInner(screens[index], VARIANTS[0], 1, true, { duration: 700, stagger: 55 });
+    }, 30));
+  });
+
+  /* ---------- 尺寸变化：重排后把当前屏内容平移复位，避免错位 ---------- */
+  let rzT = null;
+  addEventListener('resize', () => {
+    clearTimeout(rzT);
+    rzT = setTimeout(() => {
+      fitLayout();
+      const cur = screens[index];
+      innerEls(cur).forEach(el => place(el, { transform: 'none', opacity: 1 }, false));
+      cur.style.transition = 'none';
+      cur.style.transform = 'none';
+      cur.style.opacity = '1';
+      reflow();
+      syncDock();
+    }, 150);
+  }, { passive: true });
+
+  /* ================================================================
+   * 技能卡聚焦：点击 → 卡片原地微微放大，其余卡片顺势向两侧滑开
+   *   关键点：放大走 transform（不参与网格布局）→ 视觉上一定不与邻居重叠；
+   *   邻居的让位靠 padding 位移（会改变布局），再交给 flip() 做批量补间，
+   *   所以既有"推挤让位"的实感，又不会看到任何跳变。
+   * ================================================================ */
+  const skillsBox = document.querySelector('.skills');
+  if (skillsBox) {
+    const cards = Array.from(skillsBox.querySelectorAll(':scope > .skill'));
+    const GAP_X = 30;                                 // 邻居让位的平移距离
+    const SCALE = 1.055;                              // "微微变大"
+    let activeCard = null;
+
+    /* 把每张卡的目标姿态算出来：{ 平移X, 缩放 } */
+    function poseFor(el, next) {
+      if (!next) return { x: 0, s: 1 };                    // 全部收起
+      const i = cards.indexOf(el), j = cards.indexOf(next);
+      if (i === j) return { x: 0, s: SCALE };              // 被选中的卡：原地微微放大
+      /* 邻居沿 X 轴向外平移，给放大后的卡片让出空间（尺度差约 15px，30px 余量足够不重叠） */
+      return { x: i < j ? -GAP_X : GAP_X, s: 1 };
+    }
+
+    function setActive(card) {
+      if (card === activeCard) return;
+      const next = card;                                   // null = 全部收起
+      const poses = cards.map(el => ({ el, pose: poseFor(el, next) }));
+
+      /* 用引擎的 flip() 做批量补间：First 记录当前位姿 → 变更 → Play 平滑滑到位。
+         被点卡的放大走回弹曲线（尾段轻微越过再收回），邻居走常规缓出 —— 丝滑不跳变。 */
+      flip(cards,
+           () => {
+             poses.forEach((p, i) => {
+               const el = p.el;
+               el.style.transition = 'transform 620ms cubic-bezier(' +
+                 (p.pose.s !== 1 ? '.34,1.4,.5,1' : '.22,.61,.36,1') + ')';
+               el.style.transformOrigin = 'center center';
+               el.style.transform = 'translateX(' + p.pose.x + 'px)' +
+                                    (p.pose.s !== 1 ? ' scale(' + p.pose.s + ')' : '');
+               el.classList.toggle('active', el === next);
+             });
+             skillsBox.classList.toggle('focusing', !!next);
+           },
+           { duration: 620 });
+
+      /* 标记为动画中，避免被其它 FLIP 采样污染；同时记录，便于打断时归位 */
+      poses.forEach(p => {
+        animating.set(p.el, true);
+        setTimeout(() => { animating.set(p.el, false); }, 660);
+      });
+      activeCard = next;
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', e => {
+        if (document.body.classList.contains('editing')) return;      // 编辑模式下不抢交互
+        const sel = window.getSelection && String(window.getSelection());
+        if (sel && sel.length) return;                                // 用户在选文本
+        if (e.target.closest('a, button, input')) return;
+        setActive(card === activeCard ? null : card);                 // 再点自己 = 收起
+      });
+    });
+
+    /* 切屏 / 重置时收起聚焦，避免把放大态带进下一屏 */
+    addEventListener('hashchange', () => { if (activeCard) setActive(null); });
+    resetSkillFocus = () => { if (activeCard) setActive(null); };   // 供 go() 调用（闭包内变量，不污染全局）
+  }
+  })();
+</script>
+</body></html>
